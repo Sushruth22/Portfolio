@@ -18,15 +18,15 @@ Portfolio/
 ├── index.html          # Main HTML file
 ├── styles.css          # CSS styling
 ├── script.js           # JavaScript functionality
-├── profile-image.jpg   # Your profile image (you need to add this)
+├── IMG_9659.png       # Your profile image
 └── README.md           # This file
 ```
 
 ## Setup Instructions
 
-1. **Add Your Profile Image**:
-   - Save your profile image as `profile-image.jpg` in the same folder
-   - Recommended size: 300x300 pixels or larger (square aspect ratio)
+1. **Profile Image**:
+   - Your profile image `IMG_9659.png` is already included
+   - The image will be automatically cropped to fit the circular frame
    - Supported formats: JPG, PNG, WebP
 
 2. **Open the Website**:
