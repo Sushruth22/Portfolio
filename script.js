@@ -148,3 +148,49 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// EmailJS Configuration and Contact Form Handler
+(function() {
+    // Initialize EmailJS with your public key
+    emailjs.init("_kkWdz5DqbdoYmRxS"); // Replace with your actual EmailJS public key
+    
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                to_email: 'sushruthveldi22@gmail.com'
+            };
+            
+            // Show loading state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Send email using EmailJS
+            emailjs.send('service_ics0uek', 'template_fxb11bi', formData)
+                .then(function(response) {
+                    // Success
+                    alert('Message sent successfully! I\'ll get back to you soon.');
+                    contactForm.reset();
+                }, function(error) {
+                    // Error
+                    alert('Sorry, there was an error sending your message. Please try again or contact me directly at sushruthveldi22@gmail.com');
+                    console.error('EmailJS Error:', error);
+                })
+                .finally(function() {
+                    // Reset button state
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+    }
+})();
