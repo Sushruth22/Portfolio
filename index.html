@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -302,20 +300,25 @@
             <!-- Contact Form -->
             <div class="contact-form-container">
                 <h3>Send me a message</h3>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" action="https://formspree.io/f/xyzdlndr" method="POST">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
+                    
+                    <!-- Success message -->
+                    <div class="success-message" style="display: none;">
+                        <p>Message sent successfully! I'll get back to you soon.</p>
+                    </div>
                 </form>
             </div>
         </div>

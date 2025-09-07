@@ -151,8 +151,8 @@ document.head.appendChild(style);
 
 // EmailJS Configuration and Contact Form Handler
 (function() {
-    // Initialize EmailJS with your public key
-    emailjs.init("_kkWdz5DqbdoYmRxS"); // Replace with your actual EmailJS public key
+    // Initialize EmailJS with your ACTUAL public key
+    emailjs.init("YOUR_ACTUAL_PUBLIC_KEY_HERE"); // Replace with your real EmailJS public key
     
     const contactForm = document.getElementById('contactForm');
     
@@ -175,8 +175,8 @@ document.head.appendChild(style);
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
             
-            // Send email using EmailJS
-            emailjs.send('service_ics0uek', 'template_fxb11bi', formData)
+            // Send email using EmailJS with your ACTUAL service and template IDs
+            emailjs.send('YOUR_ACTUAL_SERVICE_ID', 'YOUR_ACTUAL_TEMPLATE_ID', formData)
                 .then(function(response) {
                     // Success
                     alert('Message sent successfully! I\'ll get back to you soon.');
