@@ -84,7 +84,7 @@ body {
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('about/Welcome-banner.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;
     color: white;
     min-height: 100vh;
     display: flex;
@@ -214,8 +214,27 @@ section {
 }
 
 .about-content {
-    max-width: 800px;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 2;
 }
 
 .about-text p {
@@ -591,6 +610,15 @@ section {
     .hero-buttons {
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-bottom: 2rem;
     }
 
     .about-stats {
